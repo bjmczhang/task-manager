@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Red_Hat_Display
+ } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const red_hat_display
+ = Red_Hat_Display
+({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Cloud-Based Task Manager",
@@ -16,7 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={red_hat_display
+.className}>
+        <div className="w-full min-h-screen flex items-center justify-center flex-col lg:flex-row bg-gradient-to-br from-[#e1f2fb] to-[#f4f3e5]">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
